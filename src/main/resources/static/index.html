@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Game Marketplace API</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
+        h1 { color: #2c3e50; }
+        h2 { color: #34495e; margin-top: 30px; }
+        h3 { color: #16a085; }
+        ul { background: #f8f9fa; padding: 20px; border-radius: 5px; }
+        li { margin: 10px 0; }
+        .container { max-width: 800px; margin: 0 auto; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Game Marketplace API!</h1>
+        
+        <h2>Application: Gaming Marketplace 'GameHub'</h2>
+        
+        <h3>Entités:</h3>
+        <ul>
+            <li>User</li>
+            <li>Game</li>
+            <li>Product</li>
+            <li>CoinPackage</li>
+            <li>Transaction</li>
+            <li>Inventory</li>
+        </ul>
+        
+        <h3>Relations:</h3>
+        <ul>
+            <li>Un User peut avoir plusieurs Transactions et plusieurs Inventory items</li>
+            <li>Un Game peut avoir plusieurs Products</li>
+            <li>Un Product appartient à un Game</li>
+            <li>Une Transaction est liée à un User</li>
+            <li>Un Inventory item est lié à un User et un Game ou Product</li>
+        </ul>
+        
+        <h3>Endpoints disponibles:</h3>
+        <ul>
+            <li><strong>GET</strong> /api/users - Obtenir tous les utilisateurs</li>
+            <li><strong>POST</strong> /api/users - Créer un nouvel utilisateur</li>
+            <li><strong>GET</strong> /api/games - Obtenir tous les jeux</li>
+            <li><strong>POST</strong> /api/games - Créer un nouveau jeu</li>
+            <li><strong>POST</strong> /api/marketplace/purchase-coins - Acheter des coins</li>
+            <li><strong>POST</strong> /api/marketplace/purchase-game - Acheter un jeu</li>
+            <li><strong>POST</strong> /api/marketplace/purchase-product - Acheter un produit</li>
+            <li><strong>GET</strong> /api/marketplace/inventory/{userId} - Obtenir l'inventaire d'un utilisateur</li>
+            <li><strong>GET</strong> /api/marketplace/transactions/{userId} - Obtenir l'historique des transactions</li>
+        </ul>
+    </div>
+</body>
+</html>
